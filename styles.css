@@ -1,40 +1,40 @@
 body {
-    text-align: center;
+	text-align: center;
 }
 
 h1 {
-    font-family: Monoton;
-    font-size: 70px;
-    margin: 0.2em;
+	font-family: 'Monoton', cursive;	
+	font-size: 80px;
 }
 
-h2 {
-    margin: 1em 0 0.25em;
+div p {
+	font-weight: 900;
 }
 
-h2:first-of-type {
-    margin-top: 0.5em;
+.inline {
+	float: left;
 }
 
-table,
-tr,
-td {
-    border: 1px solid black;
+#gridWrapper {
+	margin: 0 auto;
+	display: inline-block;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 0 auto;
+#colorOption {
+	font-weight: 900;
+	margin: 10px;
 }
 
-tr {
-    height: 20px;
+#options {
+	margin-bottom: 20px;
 }
 
-td {
-    width: 20px;
+.grid-cell {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ccc;
 }
 
-input[type=number] {
-    width: 6em;
+input {
+	width: 70px;
 }
