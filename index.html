@@ -1,28 +1,39 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-    <link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+	<title>Pixel Art Maker</title>
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="input_height" name="height" min="1" value="1">
-        Grid Width:
-        <input type="number" id="input_width" name="width" min="1" value="1">
-        <input type="submit">
-    </form>
+	<h1>Pixel Art Maker</h1>
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+	<div id="options">
+		<label for="height">Grid Height:</label>
+		<input type="text" id="height" value="20">
+		<label for="width">Grid Width:</label>
+		<input type="text" id="width" value="20">
+		<button id="submit">Submit</button>
+	</div>
 
-    <h2>Design Canvas</h2>
-    <table id="pixel_canvas"></table>
+	<div>
+		<label for="colorPicker" id="colorOption">Pick a color</label>
+		<input type="color" id="colorPicker">
+	</div>
 
-    <script src="designs.js"></script>
+	<div>
+		<p>Design Canvas</p>
+	</div>
+
+	<div id="gridWrapper">
+		
+	</div>
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+	<script src="designs.js"></script>
 </body>
 </html>
