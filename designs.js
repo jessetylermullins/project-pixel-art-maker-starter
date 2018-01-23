@@ -1,9 +1,4 @@
-
-
 $('#submit').click(function() {
-    // stops browser reload
-
-
 	var height = $('#height').val();
 	var width = $('#width').val();
 	makeGrid(height, width);
@@ -43,4 +38,3 @@ $('#gridWrapper').on('click', '.grid-cell', function() {
 		$(this).css('background-color', 'rgb(255, 255, 255)');
 	}
 });
-
