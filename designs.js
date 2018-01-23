@@ -26,10 +26,9 @@ function makeGrid(height, width) {
 $('#gridWrapper').on('click', '.grid-cell', function() {
     var color = $('#colorPicker').val();
 
-    // checks to see if color is transparent, then changes background color of cell
-	if ($(this).css('background-color') != 'rgba(0, 0, 0, 0)') {
-		$(this).css('background-color', 'rgba(0, 0, 0, 0)');	
+	if ($(this).css('background-color') === color) {
+		$(this).css('background-color', '#fff');
 	} else {
-		$(this).css('background-color', color);	
+		$(this).css('background-color', color);
 	}
 });

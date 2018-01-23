@@ -1,14 +1,16 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.25em;
 }
 
 h1 {
-	font-family: 'Monoton', cursive;	
-	font-size: 80px;
-}
-
-div p {
-	font-weight: 900;
+	font-family: 'Lato', sans-serif;	
+	font-size: 4em;
 }
 
 .inline {
@@ -30,9 +32,9 @@ div p {
 }
 
 .grid-cell {
-	width: 20px;
-	height: 20px;
-	border: 1px solid #ccc;
+	width: 48px;
+	height: 48px;
+	border: 1px solid #eee;
 }
 
 input {
