@@ -35,21 +35,10 @@ hr {
 .menu-wrapper {
 	display: flex;
 	flex-direction: column;
-	background-color: rgba(0, 0, 0, 0);
-	background-image: url("img/pixel-background.jpg");
-	background-repeat: no-repeat;
-	background-position: bottom-right;
-	background-size: cover;
+	background: linear-gradient(to top, rgba(17, 102, 180, 1), rgba(27, 149, 219, 1));
 	height: 100%;
 	position: fixed;
 	width: 480px;
-}
-
-.overlay {
-	background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1));
-	height: 100%;
-	width: 100%;
-	margin: 0;
 	padding: 48px;
 }
 
@@ -66,6 +55,19 @@ hr {
 	display: flex;
 	flex-direction: column;
 	width: 50%;
+	justify-content: flex-start;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;  
+}
+
+.misc-options {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
 }
 
 label {
@@ -102,25 +104,41 @@ input[type=text]:focus, input[type=text]:hover {
 	box-shadow: 0 0 5px gray;
 }
 
-input#submit {
+input#submit, #clearGrid {
 	background-color: darkgray;
 	border-radius: 8px;
 	color: white;
 	font-family: 'Lato', sans-serif;
-	font-size: 1.5em;
+	font-size: .8em;
 	margin-top: 24px;
-	margin-bottom: 48px;
+	margin-bottom: 16px;
+  	margin-right: 16px;
 	transition: 300ms all ease;
-	padding: 24px;
-	width: 100%;
-	height: 12%;
+	padding: 8px;
+	width: 25%;
+	height: 48px;
 	outline: none;
 	border: 0px;
 }
 
+input#submit {
+	background-color: white;
+	border: 1px solid mediumspringgreen;
+	color: mediumspringgreen;
+}
+
+#clearGrid {
+	  background-color: white;
+	  border: 1px solid red;
+	  color: red;
+}
+
 input#submit:hover {
-	background-color: gray;
+	border-color: springgreen;
 	color: white;
+	background-color: springgreen;
+	transform: translateY(-4px);
+	box-shadow: 4px 4px 4px rgb(3, 70, 133);
 }
 
 input#submit:focus {
@@ -134,6 +152,26 @@ input[type=color] {
 	border: 0px;
 }
 
+#showGridCheck {
+	width: 10%;
+	align-self: center;
+	height: auto;
+	margin: 0;
+}
+
+.misc-options > label {
+	font-size: .8em;
+	margin: 0 auto;
+}
+ 
+#clearGrid:hover {
+  border-color: red;
+  color: white;
+  background-color: red;
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 4px rgb(3, 70, 133);
+}
+
 #gridWrapper {
 	margin: 6% auto;
 	padding-left: 480px;
@@ -143,8 +181,8 @@ input[type=color] {
 .grid-cell {
 	width: 24px;
 	height: 24px;
-	border: 1px solid #eee;
 	transition: 300ms all ease;
+	border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .grid-cell:hover {
@@ -153,4 +191,8 @@ input[type=color] {
 
 .inline {
 	float: left;
+}
+
+#gridWrapper.grid-cell-border .grid-cell {
+	border: 1px solid #eee;
 }
