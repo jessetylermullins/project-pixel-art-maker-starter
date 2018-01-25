@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -9,33 +11,42 @@
 
 	<div class="container">
 		<div class="menu-wrapper">
-			<div class="overlay">
-				<div class="header-wrapper">
-					<h1>Pixel Art</h1>
-					<h1>Maker</h1>
-					<hr>
+			<div class="header-wrapper">
+				<h1>Pixel Art</h1>
+				<h1>Maker</h1>
+				<hr>
+			</div>
+
+			<div class="options-wrapper">
+				<div id="options">
+					<label for="height">Height:</label>
+					<input type="text" id="height" value="30">
+					<label for="width">Width:</label>
+					<input type="text" id="width" value="30">
 				</div>
 
-				<div class="options-wrapper">
-					<div id="options">
-						<label for="height">Height:</label>
-						<input type="text" id="height" value="30">
-						<label for="width">Width:</label>
-						<input type="text" id="width" value="30">
-					</div>
+				<div class="color-picker-options">
+					<label for="colorPicker">Color:</label>
+					<input type="color" id="colorPicker">
 
-					<div class="color-picker-options">
-						<label for="colorPicker">Color:</label>
-						<input type="color" id="colorPicker">
+					<div class="misc-options">
+
+						<label for="showGridCheck">Hide Grid</label>
+						<input type="checkbox" id="showGridCheck">
+
 					</div>
 				</div>
+			</div>
 
-				<input type="submit" id="submit" value="Create">
+			<div class="buttons-wrapper">
+				<button type="button" id="clearGrid">Clear</button>
 
+				<input type="submit" id="submit" value="New">
 			</div>
 		</div>
 
-		<div id="gridWrapper"></div>
+		<div id="gridWrapper" class="grid-cell-border"></div>
+		
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>

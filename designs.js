@@ -38,3 +38,43 @@ $('#gridWrapper').on('click', '.grid-cell', function() {
 		$(this).css('background-color', 'rgb(255, 255, 255)');
 	}
 });
+
+// clears grid to prevent needing to remake it
+function clearCanvas(height,width){
+	$('.grid-cell').css('background-color', '');
+  }
+  
+$('#clearGrid').click(function(){
+	clearCanvas(height,width);
+  });
+
+
+// Gridline toggle
+
+// React to 'hide grid' checkbox toggle
+$('#showGridCheck:checkbox').on('click', function() {
+	$('#gridWrapper').toggleClass('grid-cell-border')
+	
+	// $('#gridWrapper').toggleClass('grid-cell-border');
+});
+
+
+/* NEW FEATURES IN DEVELOPMENT
+
+let brushDown;
+$('body').mousedown(function() {
+    brushDown = true;
+}).mouseup(function() {
+    brushDown = false;
+});
+
+$('#pixel_canvas').mousedown(function(event) {
+    event.preventDefault();
+});
+
+$(document).on('mouseover', '.pixel', function(event) {
+    // Only apply new color if the brush/mouse is down!
+    if (brushDown) $(event.target).css("background-color", brushColor);
+});
+
+*/
